@@ -42,7 +42,7 @@ def streamlit_menu(example=1):
 selected = streamlit_menu(example=EXAMPLE_NO)
 
 
-embeddings = OpenAIEmbeddings(openai_api_key='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', model='text-embedding-ada-002')
+embeddings = OpenAIEmbeddings(openai_api_key='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', model='text-embedding-ada-002')
 
 pinecone.init(
     api_key= '4e59065a-e6cd-4b38-a669-89a199057c6f',  # find at app.pinecone.io
