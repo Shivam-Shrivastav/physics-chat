@@ -19,7 +19,7 @@ import requests
 from streamlit_lottie import st_lottie
 
 
-os.environ["OPENAI_API_KEY"] = "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" 
+os.environ["OPENAI_API_KEY"] = "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" 
 EXAMPLE_NO = 1
 
 
@@ -45,8 +45,8 @@ selected = streamlit_menu(example=EXAMPLE_NO)
 embeddings = OpenAIEmbeddings(openai_api_key='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', model='text-embedding-ada-002')
 
 pinecone.init(
-    api_key= '8c2cf921-9a39-469b-88e3-3e49ae8a927e',  # find at app.pinecone.io
-    environment= 'us-west4-gcp'  # next to api key in console
+    api_key= '4e59065a-e6cd-4b38-a669-89a199057c6f',  # find at app.pinecone.io
+    environment= 'gcp-starter'  # next to api key in console
 )
 
 
@@ -72,7 +72,7 @@ PROMPT2 = PromptTemplate(template=template2, input_variables=["topic"])
 
 
 
-@st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
+# @st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
 def get_conversation_chain(PROMPT):
     # llm = ChatOpenAI()
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
