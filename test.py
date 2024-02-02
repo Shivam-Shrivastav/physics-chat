@@ -15,7 +15,7 @@ EXAMPLE_NO = 1
 
 
 
-st.set_page_config(page_title="NIKI VA ",
+st.set_page_config(page_title="Physics Chatbot ",
                        page_icon=":books:")
 def streamlit_menu(example=1):
     if example == 1:
@@ -46,7 +46,7 @@ if selected == "Chat (QNA)":
     with left:
         st.title(""" 
 
-        NIKI VA
+        Physics Chatbot
         
         """)
     with right:
@@ -86,7 +86,7 @@ if selected == "Chat (QNA)":
     else:
         if input_:
             chat_history = st.session_state.chat_history
-            output = Gouravs_Model(input)
+            # output = Gouravs_Model(input)
             # output = chain({"query": input_})
             # output = output['answer']
             st.session_state.message_history.append(input_)
